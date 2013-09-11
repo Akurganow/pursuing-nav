@@ -5,3 +5,6 @@ Sticky Scroll
 ```js
 $('#main-nav').stickyscroll();
 ```
+
+###TODO
+- Сделать демо
