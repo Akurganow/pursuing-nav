@@ -12,16 +12,11 @@
 		if(!element.hasClass('navbar-fixed-top')){
 			element.addClass('navbar-fixed-top');
 		}
-		if(!element.children().hasClass('container')){
-			element.wrapInner('<div class="container"></div>');
-		}
 		element.css({ //задаем css
 			position: 'absolute',
 			top: offsetTop,
 			left: offsetLeft
 		});
-
-
 
 		$(window).scroll(function(){
 			var sc = $(document).scrollTop();
