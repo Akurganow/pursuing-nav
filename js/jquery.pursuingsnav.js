@@ -14,8 +14,7 @@
 		}
 		element.css({ //задаем css
 			position: 'absolute',
-			top: offsetTop,
-			left: offsetLeft
+			top: offsetTop
 		});
 
 		$(window).scroll(function(){
