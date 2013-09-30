@@ -1,0 +1,22 @@
+#main-nav{
+	border-radius: 0;
+}
+
+#page-content{
+	margin-top: 80px;
+}
+
+.navbar-inverse .navbar-brand {
+	border-bottom: none;
+	border-right: none;
+}
+.navbar-inverse .nav > li > a {
+	border-bottom: none;
+	border-right: none;
+}
+
+/*** Highlight ***/
+
+pre code {
+	background: transparent;
+}

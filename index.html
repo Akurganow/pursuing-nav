@@ -6,50 +6,84 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width">
 
-  <title>Sticky Scroll</title>
+  <title>Pursuings nav</title>
 
-  <!-- Flatdoc -->
+  <!-- Scripts -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src='http://rstacruz.github.io/flatdoc/v/0.8.0/legacy.js'></script>
-  <script src='flatdoc.js'></script>
-
-  <!-- Flatdoc theme -->
-  <link  href='http://rstacruz.github.io/flatdoc/v/0.8.0/theme-white/style.css' rel='stylesheet'>
-  <script src='http://rstacruz.github.io/flatdoc/v/0.8.0/theme-white/script.js'></script>
-
-  <!-- Meta -->
-  <meta content="Sticky Scroll" property="og:title">
-  <meta content="jQuery plugin  sticky scroll." name="description">
-
-  <!-- Initializer -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="js/jquery.pursuingsnav.js"></script>
+  <script src="js/log.js"></script>
+  <script src="js/holder.js"></script>
+  <script src="//yandex.st/highlightjs/7.3/highlight.min.js"></script>
   <script>
-    Flatdoc.run({
-      fetcher: Flatdoc.github('Akurganow/stickyscroll')
+    $(document).ready(function(){
+      $('#main-nav').pursuingsnav();
+      $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
     });
   </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/flatui.css">
+  <link rel="stylesheet" href="css/githubcode.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Meta -->
+  <meta content="Pursuing navigation" property="og:title">
+  <meta content="jQuery plugin pursuing navigation for bootstrap." name="description">
+
 </head>
-<body role='flatdoc' class='no-literate'>
-
-  <div class='header'>
-    <div class='left'>
-      <h1>Sticky Scroll</h1>
-      <ul>
-        <li><a href='https://github.com/Akurganow/stickyscroll'>View on GitHub</a></li>
-        <li><a href='https://github.com/Akurganow/stickyscroll/issues'>Issues</a></li>
-      </ul>
+<body>
+  <!-- Navbar -->
+  <nav id="main-nav" class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Pursuing nav</a>
     </div>
-    <div class='right'>
-      <!-- GitHub buttons: see http://ghbtns.com -->
-      <iframe src="http://ghbtns.com/github-btn.html?user=Akurganow&amp;repo=stickyscroll&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <div class="container">
+        <ul class="nav navbar-nav navbar-right">
+          <li style="margin-top: 14px;"><iframe src="http://ghbtns.com/github-btn.html?user=Akurganow&repo=pursuing-nav&type=watch" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe></li>
+          <li style="margin-top: 14px;"><iframe src="http://ghbtns.com/github-btn.html?user=Akurganow&repo=pursuing-nav&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe></li>
+        </ul>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+  <div id="page-content" class="container">
+    <div class="col-sm-12">
+      <h3>Описание</h3>
+      <p>
+        Этот плагин делает навигационный бар преследующим, это значит, что когда вы скролите вниз он скрывается, но своей нижней границей остается приклееным к верхней границе документа, т.е когда вы скролите, навигационная панель вам не видна, но когда вы начинаете скролть вверх, панель следует за документом до тех пор, пока не приклеится своей верхней границей к верхней границе документа.
+        На данный момент работает только с  <a href="http://getbootstrap.com/">Bootstrap3</a>
+      </p>
+      <p>
+        Использование простейшее:
+      </p>
+      <pre><code class="javascript">
+          $(document).ready(function(){
+            $('#main-nav').pursuesnav();
+          });
+        </code></pre>
+      <h3>Немного рыбы, чтобы документ получился большим и можно было проверить работу плагина</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat vulputate nisi, eget rutrum purus iaculis a. Maecenas non magna dui. Fusce luctus consequat dapibus. Morbi imperdiet tellus non metus hendrerit aliquet. Sed in porta elit. Ut blandit metus dui, quis viverra purus dapibus quis. Vivamus mollis condimentum lobortis. Morbi sagittis condimentum enim id feugiat.</p>
+      <img src="http://lorempixel.com/output/cats-q-c-1110-685-4.jpg" class="img-responsive">
+      <p>Fusce adipiscing volutpat leo, egestas consequat ipsum hendrerit vel. Donec rhoncus vel lectus et elementum. Mauris cursus posuere enim vitae mollis. Nullam volutpat magna ac vehicula fermentum. In hac habitasse platea dictumst. Morbi facilisis lectus quis diam interdum hendrerit. Fusce vitae commodo sapien. Cras a vestibulum felis.</p>
+      <p>Quisque porttitor vel nulla ac ornare. Donec ac turpis lacus. In luctus feugiat erat et dignissim. Nam porttitor convallis nulla, eget dignissim nibh lobortis eu. Nam id odio erat. Pellentesque orci lacus, viverra non semper ut, pulvinar id erat. Nunc lobortis eleifend congue. Vivamus rhoncus neque non erat congue, ut vulputate sem fringilla. Nam vel nisi ac metus vulputate eleifend. Suspendisse placerat blandit ligula, eget iaculis magna faucibus ut.</p>
+      <p>Praesent congue libero quis suscipit imperdiet. Phasellus at pellentesque arcu. Mauris fringilla risus nec ipsum scelerisque venenatis. Vestibulum cursus nunc sit amet diam luctus, in mollis turpis blandit. Curabitur a massa sit amet turpis pulvinar porta. Nunc ultricies egestas mi, sed molestie nibh pharetra id. Ut erat nibh, blandit a ultricies ut, aliquet in nisi. Suspendisse vel bibendum nibh. Vestibulum adipiscing accumsan iaculis. Praesent magna lorem, varius non justo vitae, consectetur vestibulum leo. Maecenas egestas, orci ac posuere varius, quam sapien iaculis odio, et bibendum lectus enim vel ante. Sed ac tempus enim. Nunc viverra ante luctus, tempus urna suscipit, fringilla eros.</p>
+      <img src="http://lorempixel.com/output/cats-q-c-1110-685-2.jpg" class="img-responsive">
+      <p>Nam rhoncus odio nec accumsan pulvinar. Suspendisse sed luctus erat. Praesent tincidunt eu sem sed vehicula. Nullam mi diam, pellentesque quis ligula in, ullamcorper dignissim enim. Fusce nec purus id mi varius vulputate. Quisque dapibus turpis sit amet eros vestibulum, in sodales mi aliquet. Donec scelerisque, est sit amet adipiscing lacinia, orci odio condimentum ante, ac molestie erat nunc sit amet ligula. Ut risus magna, sodales at urna ut, iaculis ultricies magna.</p>
+      <p>Donec in risus sapien. Aenean felis velit, consequat a ante aliquam, sodales tempus mi. Aliquam volutpat tempor dui in mattis. Etiam mattis malesuada sem id rhoncus. Nam sed sem dictum, eleifend urna sit amet, interdum massa. Nulla nec rutrum eros, et sodales risus. Nam ligula dolor, tincidunt at fringilla aliquet, facilisis ut mi. Suspendisse tincidunt quam ut quam laoreet, eu dictum dolor ultrices. Aenean rhoncus consectetur tincidunt. Nunc venenatis malesuada mauris, ac egestas nulla dictum sed. Sed mattis quam pretium orci scelerisque, vel elementum ante bibendum.</p>
+      <p>Sed vitae magna eu neque convallis convallis vitae a urna. Mauris aliquam varius auctor. Mauris sit amet mi scelerisque, bibendum felis ac, laoreet massa. Quisque commodo laoreet felis vel tincidunt. Nulla a urna eu tellus congue eleifend dignissim condimentum ante. Suspendisse id lacus at velit placerat posuere vel sed sem. Integer eu nisi ut tellus malesuada malesuada.</p>
+      <img src="http://lorempixel.com/output/technics-q-c-1110-685-4.jpg" class="img-responsive">
+      <p>Ut in massa est. Quisque vel ligula in ipsum rutrum volutpat. Pellentesque nec sem purus. Sed sagittis dignissim porttitor. Duis tempor nibh a odio aliquam, luctus bibendum risus aliquam. Donec id elit quis nisl iaculis porta vel a lectus. Quisque et sagittis leo. Nunc pellentesque augue nec nisi faucibus varius. Donec imperdiet leo ac ipsum eleifend, non dignissim metus rutrum.</p>
+      <p>Integer eget placerat erat. Aenean posuere gravida dolor. Suspendisse potenti. Aenean id nulla vel turpis rutrum luctus. Nullam tempor tincidunt erat sed ullamcorper. Proin varius risus sed metus condimentum, nec ornare felis tempor. Mauris elementum, purus eu rhoncus aliquet, nisl metus molestie nunc, a feugiat magna lectus id augue. Curabitur sit amet vehicula purus. Pellentesque eros augue, tristique eu urna vitae, laoreet gravida diam. Aliquam erat volutpat. Donec quam nibh, cursus quis feugiat sit amet, feugiat ut magna.</p>
+      <p>Nam pharetra nisi neque, vel porttitor sapien eleifend tincidunt. Quisque mattis rutrum urna, et posuere augue adipiscing sed. Nunc ac fringilla mauris, sed malesuada lectus. Maecenas mattis pharetra felis sed tincidunt. Maecenas bibendum scelerisque ligula eu condimentum. Aenean id rutrum velit. Fusce nulla orci, accumsan eget magna tempus, sagittis iaculis libero. Sed faucibus tristique vulputate. Pellentesque hendrerit urna lectus, tempus molestie lacus mollis in. Ut mauris arcu, euismod ut interdum nec, adipiscing quis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in erat nec leo commodo facilisis.</p>
     </div>
   </div>
-
-  <div class='content-root'>
-    <div class='menubar'>
-      <div class='menu section' role='flatdoc-menu'></div>
-    </div>
-    <div role='flatdoc-content' class='content'></div>
-  </div>
-
 </body>
 </html>
