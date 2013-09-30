@@ -1,15 +1,23 @@
 (function($) {
-	$.fn.pursuesnav = function(){
+	$.fn.pursuingsnav = function(){
 		var element = this, //приклеивающийся элемент
 				height = element.outerHeight(), //высота элемента
-				offset = element.offset().top, //отступ от верхней границы документа
-				stick = height+offset; //момент приклеивания
+				width = element.outerWidth(), //ширина элемента
+				offsetTop = element.offset().top, //отступ от верхней границы документа
+				offsetLeft = element.offset().left, //отступ от левой границы элемента
+				stick = height+offsetTop; //момент приклеивания
 				presc = 0, //зададим переменную для вычисления направления движения
 				delta = 0; //зададим переменную дельты
+		if(!element.hasClass('navbar-fixed-top')){
+			element.addClass('navbar-fixed-top'); //Если у элемента нет класса .navbar-fixed-top добавим
+		}
 		element.css({ //задаем css
 			position: 'absolute',
-			top: offset
+			top: offsetTop,
+			left: offsetLeft
 		});
+
+
 
 		$(window).scroll(function(){
 			var sc = $(document).scrollTop();
@@ -44,11 +52,5 @@
 			}
 			presc = sc;
 		});
-
-			
-
-
-			
-
 	};
 })(jQuery);
