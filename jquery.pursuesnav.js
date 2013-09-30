@@ -1,5 +1,5 @@
 (function($) {
-	$.fn.stickyscroll = function(){
+	$.fn.pursuesnav = function(){
 		var element = this, //приклеивающийся элемент
 				height = element.outerHeight(), //высота элемента
 				offset = element.offset().top, //отступ от верхней границы документа

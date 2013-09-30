@@ -3,7 +3,7 @@ Sticky Scroll
 
 ###Usage
 ```js
-$('#main-nav').stickyscroll();
+$('#main-nav').pursuesnav();
 ```
 
 ###TODO
