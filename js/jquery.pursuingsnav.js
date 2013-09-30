@@ -9,7 +9,9 @@
 				presc = 0, //зададим переменную для вычисления направления движения
 				delta = 0; //зададим переменную дельты
 		log('*Element height*: '+height+'\n*Element width*: '+width+'\n*Element offset top*: '+offsetTop+'\n*Element offset left*: '+offsetLeft+'\n*Element stick moment*: '+stick);
-		element.addClass('navbar-fixed-top');
+		if(!element.hasClass('navbar-fixed-top')){
+			element.addClass('navbar-fixed-top');
+		}
 		if(!element.children().hasClass('container')){
 			element.wrapInner('<div class="container"></div>');
 		}
