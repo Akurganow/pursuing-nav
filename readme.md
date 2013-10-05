@@ -6,5 +6,6 @@ Sticky Scroll
 $('#main-nav').pursuingsnav();
 ```
 
-###TODO
-- Сделать демо
+*[Demo](http://akurganow.github.io/pursuing-nav)
+
+[![TODOs by codenotes.me](http://codenotes.me/badge/12768920/todos.png)]
