@@ -1,4 +1,4 @@
-Sticky Scroll
+Pursuings nav
 ===
 
 ###Usage
@@ -6,6 +6,6 @@ Sticky Scroll
 $('#main-nav').pursuingsnav();
 ```
 
-*[Demo](http://akurganow.github.io/pursuing-nav)
+* [Demo](http://akurganow.github.io/pursuing-nav)
 
-[![TODOs by codenotes.me](http://codenotes.me/badge/12768920/todos.png)]
+![TODOs by codenotes.me](http://codenotes.me/badge/12768920/todos.png)
