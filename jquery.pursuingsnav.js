@@ -19,7 +19,12 @@
 
 
 		$(window).scroll(function(){
-			var sc = $(document).scrollTop();
+			var sc = $(document).scrollTop()
+					height = element.outerHeight(), //высота элемента
+					width = element.outerWidth(), //ширина элемента
+					offsetTop = element.offset().top, //отступ от верхней границы документа
+					offsetLeft = element.offset().left, //отступ от левой границы элемента
+					stick = height+offsetTop; //момент приклеивания;
 			if(sc>0){
 				if(presc<sc){delta = -1}
 				else if(presc>sc){delta = 1}
