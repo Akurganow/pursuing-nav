@@ -8,19 +8,6 @@
 
   <title>Pursuings nav</title>
 
-  <!-- Scripts -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="js/jquery.pursuingsnav.js"></script>
-  <script src="js/log.js"></script>
-  <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#main-nav').pursuingsnav();
-      $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
-    });
-  </script>
-
   <!-- Styles -->
   <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/flatui.css">
@@ -59,7 +46,6 @@
       <h3>Описание</h3>
       <p>
         Этот плагин делает навигационный бар преследующим, это значит, что когда вы скролите вниз он скрывается, но своей нижней границей остается приклееным к верхней границе документа, т.е когда вы скролите, навигационная панель вам не видна, но когда вы начинаете скролть вверх, панель следует за документом до тех пор, пока не приклеится своей верхней границей к верхней границе документа.
-        На данный момент работает только с  <a href="http://getbootstrap.com/">Bootstrap3</a>
       </p>
       <p>
         Использование простейшее:
@@ -87,6 +73,14 @@
       <p>Nam pharetra nisi neque, vel porttitor sapien eleifend tincidunt. Quisque mattis rutrum urna, et posuere augue adipiscing sed. Nunc ac fringilla mauris, sed malesuada lectus. Maecenas mattis pharetra felis sed tincidunt. Maecenas bibendum scelerisque ligula eu condimentum. Aenean id rutrum velit. Fusce nulla orci, accumsan eget magna tempus, sagittis iaculis libero. Sed faucibus tristique vulputate. Pellentesque hendrerit urna lectus, tempus molestie lacus mollis in. Ut mauris arcu, euismod ut interdum nec, adipiscing quis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed in erat nec leo commodo facilisis.</p>
     </div>
   </div>
+  <!-- Scripts -->
+  <script src="//cdn.jsdelivr.net/g/jquery@2,jquery.pursuing-nav,highlight@8"></script>
+  <script>
+    $(document).ready(function(){
+      $('#main-nav').pursuingsnav();
+      $('pre code').each(function(i, e) {hljs.highlightBlock(e)});
+    });
+  </script>
   <!-- Yandex.Metrika counter --><script type="text/javascript">(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter22597981 = new Ya.Metrika({id:22597981, accurateTrackBounce:true}); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");</script><noscript><div><img src="//mc.yandex.ru/watch/22597981" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
 </body>
 </html>
