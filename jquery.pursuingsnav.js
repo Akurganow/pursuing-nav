@@ -25,24 +25,24 @@
 				delta = 0;
 
     if(is_pursuing){
-      element.css({ //задаем css
+      element.css({
         position: 'absolute',
         top: offsetTop
       });
 
       $(window).scroll(function(){
         var sc = $(document).scrollTop()
-            height = element.outerHeight(), //высота элемента
-            width = element.outerWidth(), //ширина элемента
-            offsetTop = element.offset().top, //отступ от верхней границы документа
-            offsetLeft = element.offset().left, //отступ от левой границы элемента
-            stick = height+offsetTop; //момент приклеивания;
+            height = element.outerHeight(),
+            width = element.outerWidth(),
+            offsetTop = element.offset().top,
+            offsetLeft = element.offset().left,
+            stick = height+offsetTop;
         if(sc>0){
           if(presc<sc){delta = -1}
           else if(presc>sc){delta = 1}
           else{delta = 0};
         }
-        if(delta<0){// скрол вниз
+        if(delta<0){
           if(sc == element.offset().top){
             element.css({
               position: 'absolute',
@@ -57,7 +57,7 @@
           }
 
         }
-        else if(delta>0){//скрол вверх
+        else if(delta>0){
           stick = height+element.offset().top;
           if(sc <= element.offset().top){
             element.css({
@@ -71,7 +71,7 @@
     }
     else if(is_fixed){
       var element = this;
-      element.css({ //задаем css
+      element.css({
         position: 'fixed',
         top: offsetTop
       });
