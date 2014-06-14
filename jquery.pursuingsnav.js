@@ -1,7 +1,7 @@
 /*!
  * Pursuing Nav v0.2 (http://akurganow.github.io/pursuing-nav)
  * Copyright 2013-2014 Alexander Kurganov.
- * Licensed under Creative Commons «Attribution-ShareAlike» 4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+ * Licensed under Creative Commons Attribution-ShareAlike 4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
  */
 
 (function($) {
