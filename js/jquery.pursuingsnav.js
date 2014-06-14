@@ -29,6 +29,7 @@
 				position: 'absolute',
 				top: offsetTop
 			});
+			element.addClass('pursuing');
 
 			$(window).scroll(function(){
 				var sc = $(document).scrollTop()
@@ -75,6 +76,7 @@
 				position: 'fixed',
 				top: offsetTop
 			});
+			element.addClass('fixed')
 		}
 	};
 })(jQuery);
