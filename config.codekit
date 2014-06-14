@@ -18,9 +18,9 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jquery.pursuingsnav.min.js",
-		"outputAbbreviatedPath": "\/jquery.pursuingsnav.min.js",
+		"outputAbbreviatedPath": "\/min\/jquery.pursuingsnav.min-ck.js",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
@@ -224,7 +224,7 @@
 			"flagValue": -1
 			},
 		"camelcase": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			},
 		"couch": {
@@ -574,7 +574,7 @@
 			"flagValue": -1
 			},
 		"white": {
-			"active": 1,
+			"active": 0,
 			"flagValue": -1
 			}
 		},
