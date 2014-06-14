@@ -1,7 +1,9 @@
 /*!
- * Pursuing Nav v0.2 (http://akurganow.github.io/pursuing-nav)
- * Copyright 2013-2014 Alexander Kurganov.
- * Licensed under GPL License (http://www.gnu.org/licenses/gpl.html)
+ * @title Pursuing Nav
+ * @url http://akurganow.github.io/pursuing-nav
+ * @version 0.2
+ * @author Alexander Kurganov.
+ * @license http://www.gnu.org/licenses/gpl.html
  */
 
 (function($) {
