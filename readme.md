@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Akurganow/pursuing-nav.png?label=ready&title=Ready)](https://waffle.io/Akurganow/pursuing-nav)
 Pursuings nav
 ===
 
