@@ -1,4 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/Akurganow/pursuing-nav.png?label=ready&title=Ready)](https://waffle.io/Akurganow/pursuing-nav)
+[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=3201138)](https://www.bountysource.com/trackers/3201138-akurganow-pursuing-nav?utm_source=3201138&utm_medium=shield&utm_campaign=TRACKER_BADGE)
 Pursuings nav
 ===
 
