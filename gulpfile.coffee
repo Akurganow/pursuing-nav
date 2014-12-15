@@ -11,8 +11,8 @@ gulp.task 'connect', ->
 
 gulp.task 'coffee', ->
   gulp.src file
-  .pipe $.coffee()
-  .pipe $.uglify()
+  .pipe $.coffee({bare: true})
+  .pipe $.uglify({mangle: false})
   .pipe gulp.dest './'
 
 gulp.task 'watch', ['connect'], ->

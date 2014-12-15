@@ -1,4 +1,4 @@
-###!
+###
  @title Pursuing Nav
  @url http://akurganow.github.io/pursuing-nav
  @version 0.2.2
@@ -29,7 +29,8 @@ $.fn.pursuingnav = ->
   if is_pursuing
     element.css({
       position: 'absolute',
-      top: offsetTop
+      top: offsetTop,
+      width: width
     });
 
     $(window).on 'scroll', ->
