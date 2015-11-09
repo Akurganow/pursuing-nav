@@ -1,18 +1,17 @@
 gulp = require('gulp')
 $ = require('gulp-load-plugins')()
 
-file = "./jquery.pursuingnav.coffee"
+file = './jquery.pursuingnav.coffee'
 
 gulp.task 'connect', ->
-  $.connect.server {
+  $.connect.server
     root: './',
     livereload: true
-  }
 
 gulp.task 'coffee', ->
   gulp.src file
-  .pipe $.coffee({bare: true})
-  .pipe $.uglify({mangle: false})
+  .pipe $.coffee(bare: true)
+  .pipe $.uglify(mangle: false)
   .pipe gulp.dest './'
 
 gulp.task 'watch', ['connect'], ->
