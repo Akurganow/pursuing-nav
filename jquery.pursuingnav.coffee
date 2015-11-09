@@ -1,7 +1,7 @@
 ###
  @title Pursuing Nav
  @url http://akurganow.github.io/pursuing-nav
- @version 0.2.2
+ @version 0.3.0
  @author Alexander Kurganov
  @license MIT
 ###

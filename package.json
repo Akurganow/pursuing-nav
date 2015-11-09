@@ -1,6 +1,6 @@
 {
   "name": "Pursuing-Nav",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "jQuery plugin for pursuing navigation bar",
   "main": "gulpfile.coffee",
   "dependencies": {},
