@@ -1,75 +1,61 @@
 ###
  @title Pursuing Nav
  @url http://akurganow.github.io/pursuing-nav
- @version 0.2.2
+ @version 0.3.0
  @author Alexander Kurganov
  @license MIT
 ###
 
 `(function($) {`
 
-$.fn.pursuingnav = ->
+$.fn.pursuingNav = (options = {}) ->
   userAgent = navigator.userAgent
-  is_pursuing = true
-  is_fixed = false
-
-  if /android|iphone|ipad/i.test(userAgent)
-    is_pursuing = false
-    is_fixed = true
+  is_pursuing = !/android|iphone|ipad/i.test(userAgent)
 
   element = this
-  height = element.outerHeight()
-  width = element.outerWidth()
+  height = options.height || element.outerHeight()
   offsetTop = element.offset().top
-  offsetLeft = element.offset().left
-  stick = height+offsetTop
-  presc = 0
-  delta = 0
+  stick = height + offsetTop
+  preSTop = $(document).scrollTop()
 
   if is_pursuing
-    element.css({
-      position: 'absolute',
-      top: offsetTop,
-      width: width
-    });
+    element.css
+      position: 'absolute'
+      top: offsetTop
 
     $(window).on 'scroll', ->
-      sc = $(document).scrollTop();
+      sTop = $(document).scrollTop()
 
-      height = element.outerHeight();
-      width = element.outerWidth();
-      offsetTop = element.offset().top;
-      offsetLeft = element.offset().left;
-      stick = height+offsetTop;
+      height = element.outerHeight() unless options.height
+      offsetTop = element.offset().top
+      stick = height + offsetTop
 
-      if sc>0
-        if presc<sc
-          delta = -1
-        else if presc>sc
-          delta = 1
-        else
-          delta = 0
+      if sTop >= 0
+        if preSTop < sTop # Scrolling downwards
+          if sTop == offsetTop
+            invisibleHeight = stick - preSTop - height
+            invisibleHeight = height if invisibleHeight > height # Fallback for scroll-clicks
 
-      if delta<0
-        if sc == element.offset().top
-          element.css({
-            position: 'absolute',
-            top:sc
-          })
+            element.css
+              position: 'absolute'
+              top: sTop - invisibleHeight
 
-        else if sc>stick
-          element.css({
-            position: 'absolute',
-            top: sc-height
-          })
+          else if sTop > stick
+            element.css
+              position: 'absolute'
+              top: sTop - height
 
-      else if delta>0
-        stick = height+element.offset().top;
-        if sc <= element.offset().top
-          element.css position: 'fixed', top: 0
+        else if preSTop > sTop # Scrolling upwards
+          if sTop <= offsetTop # When scrolled to the top of pursued element, make it fixed
+            element.css
+              position: 'fixed'
+              top: 0
 
-      presc = sc
-  else if is_fixed
-    element.css position: 'fixed', top: offsetTop
+      preSTop = sTop
+
+  else
+    element.css
+      position: 'fixed'
+      top: offsetTop
 
 `})(jQuery);`
